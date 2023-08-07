@@ -1,11 +1,13 @@
-from simbio.components import Override, Parameter, Species, EmptyGroup
+from simbio.components import EmptyGroup, Override, Parameter, Species
+from simbio.models.earm import AlbeckAsMatlab
 from simbio.reactions.compound import ReversibleSynthesis
 from simbio.reactions.enzymatic import MichaelisMenten
-from simbio.models.earm import AlbeckAsMatlab
+
 
 class Sensor(EmptyGroup):
     dimer: Species
     monomer: Species = 0
+
 
 class ARM(AlbeckAsMatlab):
     KF: Parameter
